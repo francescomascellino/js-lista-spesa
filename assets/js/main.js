@@ -17,6 +17,8 @@ console.log("Ecco la lista della spesa", shoppingList);
 
 const shoppingListNode = document.getElementById("shoppingListNode");
 
+console.log("Shopping List Node (method 1) = ", shoppingListNode);
+
 while (intemCounter < shoppingList.length) {
 
     const listElement = `<li>${shoppingList[intemCounter]}</li>`;
@@ -27,11 +29,11 @@ while (intemCounter < shoppingList.length) {
 
 }
 
-/* METHOD 2 - querySelector */
+/* METHOD 2 - querySelector and append() */
 
 const shoppingListNode2 = document.querySelector("ul")
 
-console.log("shoppiong list node 2 = ", shoppingListNode2);
+console.log("shoppiong list node (Method 2) = ", shoppingListNode2);
 
 while (intemCounter < shoppingList.length) {
 
@@ -39,9 +41,9 @@ while (intemCounter < shoppingList.length) {
 
     listElement2.innerText = shoppingList[intemCounter];
 
-    console.log("list Element 2 with text = ", listElement2);
+    console.log("list Element (Method 2) with text = ", listElement2);
 
-    shoppingListNode2.insertAdjacentElement("beforeend", listElement2)
+    shoppingListNode2.append(listElement2);
 
     intemCounter++
 
