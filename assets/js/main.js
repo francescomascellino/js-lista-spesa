@@ -7,7 +7,7 @@ Ricordiamoci di incrementare il contatore, o comunque di inserire una condizione
 
 /* Global Variables */
 
-let shoppingList = ["Pane", "Acqua", "Uova", "Olio"]
+let shoppingList = ["Pane", "Acqua", "Uova", "Olio"];
 
 let intemCounter = 0;
 
@@ -29,13 +29,16 @@ while (intemCounter < shoppingList.length) {
 
 }
 
+//Resetto la variabile
+intemCounter = 0;
+
 /* METHOD 2 - querySelector and append() */
 
-const shoppingListNode2 = document.querySelector("ul")
+const shoppingListNode2 = document.querySelector("ul");
 
 console.log("shoppiong list node (Method 2) = ", shoppingListNode2);
 
-while (intemCounter < shoppingList.length) {
+do {
 
     const listElement2 = document.createElement("li");
 
@@ -47,5 +50,5 @@ while (intemCounter < shoppingList.length) {
 
     intemCounter++
 
-}
+} while (intemCounter < shoppingList.length)
 
