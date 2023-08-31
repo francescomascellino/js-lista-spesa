@@ -51,4 +51,3 @@ do {
     intemCounter++
 
 } while (intemCounter < shoppingList.length)
-
